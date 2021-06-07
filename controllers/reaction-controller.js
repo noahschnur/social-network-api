@@ -1,0 +1,6 @@
+
+
+
+// create thought
+
+// delete thought
