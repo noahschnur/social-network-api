@@ -38,6 +38,10 @@ const ThoughtSchema = new Schema(
             minlength: 1,
             maxlenth: 280
         },
+        thoughtId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
+        },
         createdAt: {
             type: Date,
             default: Date.now,
