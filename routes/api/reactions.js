@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { 
     createReaction,
     deleteReaction
-} = reuqire('../../controllers/reaction-controller');
+} = require('../../controllers/reaction-controller');
 
 // /api/thoughts/:thoughtId/reactions
 router
