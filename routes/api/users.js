@@ -9,13 +9,13 @@ const {
 
 // /api/users
 router
-    .route('/users')
+    .route('/')
     .get(getAllUsers)
     .post(createUser);
 
 //  /api/users/:id
 router
-    .route('/users/:id')
+    .route('/:id')
     .get(getUserById)
     .put(updateUser)
     .delete(deleteUser);

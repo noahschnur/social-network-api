@@ -9,10 +9,10 @@ const UserSchema = new Schema(
             required: 'You need a username!',
             trim: true
         },
-        userId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId()
-        },
+        // userId: {
+        //     type: Schema.Types.ObjectId,
+        //     default: () => new Types.ObjectId()
+        // },
         email: {
             type: String,
             unique: true,

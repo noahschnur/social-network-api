@@ -9,14 +9,14 @@ const {
 
 // /api/thoughts
 router
-    .route('/thoughts')
-    .get(getAllThought)
-    .post(addThought);
-
-// /api/thoughts/:id
-router
-    .route('/thoughts/:id')
+    .route('/')
+    .get(getAllThought);
+    
+    // /api/thoughts/:id
+    router
+    .route('/:id')
     .get(getThoughtById)
+    .post(addThought)
     .put(updateThought)
     .delete(deleteThought);
 
