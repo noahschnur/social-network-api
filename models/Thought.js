@@ -1,13 +1,13 @@
-const { Schema, model, Types } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 
 const ReactionSchema = new Schema(
     {
-        reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId()
-        },
+        // reactionId: {
+        //     type: Schema.Types.ObjectId,
+        //     default: () => new Types.ObjectId()
+        // },
         reactionBody: {
             type: String,
             required: true,
@@ -34,7 +34,7 @@ const ThoughtSchema = new Schema(
     {
         thoughtText: {
             type: String,
-            required: true,
+            // required: true,
             minlength: 1,
             maxlenth: 280
         },

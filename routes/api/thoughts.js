@@ -12,7 +12,7 @@ router
     .route('/')
     .get(getAllThought);
     
-    // /api/thoughts/:id
+    // /api/thoughts/:userId
     router
     .route('/:id')
     .get(getThoughtById)

@@ -1,13 +1,13 @@
-const { Thought } = require('express').Router();
+const { Thought } = require('../models');
 
 const reactionController = {
-    // create reaction
-    createReaction({ params, body }, res) {
+    // add reaction
+    addReaction({ params, body }, res) {
         Thought.create(body)
             .then(({ _id }) => {
                 return Thought.findOneAndUpdate(
                     { _id: params.thoughtId },
-                    { $push: { reaction: _id } },
+                    { $push: { reactions: _id } },
                     { new: true }
                 );
             })
@@ -22,13 +22,25 @@ const reactionController = {
     },
     // delete reaction
     deleteReaction({ params }, res) {
-        Thought.findOneAndUpdate(
-            { _id: params.thoughtId },
-            { $pull: { thoughts: {thoughtId: params.thoughtId }}},
-            { new: true }
-        )
-        .then(dbThoughtData => res.json(dbThoughtData))
-        .catch(err => res.json(err));
+        Thought.findOneAndDelete({ _id: params.thoughtId })
+            .then(deletedReaction => {
+                if(!deletedReaction) {
+                    return res.status(404).json({ message: "No reaction with this id!"});
+                }
+                return Thought.findOneAndUpdate(
+                    { _id: params.thoughtId },
+                    { $pull: { reactions: {reactionId: params.reactionId }}},
+                    { new: true }
+            );
+        })
+        .then(dbThoughtData => {
+            if (!dbThoughtData) {
+                res.status(404).json({ message: "Reaction deleted"});
+                return;
+            }
+            res.json(dbThoughtData);
+        })
+    .catch(err => res.json(err));
     }
 };
 

@@ -70,7 +70,7 @@ const thoughtController = {
                     return res.status(404).json({ message: "No thought with this id!"});
                 }
                 return Thought.findOneAndUpdate(
-                    { _id:params.id },
+                    { _id: params.id },
                     { $pull: { thoughts: {thoughtId: params.id }}},
                     { new: true }
                 );
