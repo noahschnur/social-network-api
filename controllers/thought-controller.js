@@ -24,7 +24,7 @@ const thoughtController = {
             select: '-__v'
         })
         .select('-__v')
-        sort({ _id: -1})
+        .sort({ _id: -1})
         .then(dbThoughtData => res.json(dbThoughtData))
         .catch(err => {
             console.log(err);;
@@ -77,7 +77,7 @@ const thoughtController = {
             })
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: "No thought with this id!"});
+                    res.status(200).json({ message: "Thought deleted!"});
                     return;
                 }
                 res.json(dbThoughtData);

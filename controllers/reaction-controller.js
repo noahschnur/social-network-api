@@ -35,7 +35,7 @@ const reactionController = {
         })
         .then(dbThoughtData => {
             if (!dbThoughtData) {
-                res.status(404).json({ message: "Reaction deleted"});
+                res.status(200).json({ message: "Reaction deleted"});
                 return;
             }
             res.json(dbThoughtData);
