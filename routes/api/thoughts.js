@@ -11,12 +11,15 @@ const {
 router
     .route('/')
     .get(getAllThought);
-    
+
+router
+    .route('/:userId')
+    .post(addThought);
+
     // /api/thoughts/:thoughtId
     router
     .route('/:id')
     .get(getThoughtById)
-    .post(addThought)
     .put(updateThought)
     .delete(deleteThought);
 
