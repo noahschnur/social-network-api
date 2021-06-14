@@ -37,6 +37,6 @@ noahschnur@gmail.com, https://github.com/noahschnur
 
 https://github.com/noahschnur/social-network-api
 
-<!-- https://www.youtube.com/watch?v=iwpJ2mELp7c
+https://www.youtube.com/watch?v=44P9AA0B-JE
 
-[![Alt Text](https://img.youtube.com/vi/iwpJ2mELp7c/0.jpg)](https://www.youtube.com/watch?v=iwpJ2mELp7c) -->
+[![Alt Text](https://img.youtube.com/vi/44P9AA0B-JE/0.jpg)](https://www.youtube.com/watch?v=44P9AA0B-JE)
