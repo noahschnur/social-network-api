@@ -21,7 +21,7 @@ Express, Mongoose
 
 ## Usage
 
-Using Insomnia or Postman, run "node server" and follow the API routes to update the app. 'Users' can be added, deleted, updated, and found by all users and by one. 'Users' can have 'Thoughts', which can be added, updated, and deleted. 'Thoughts' can also be commented on with 'Reactions'. 'Reactions can be uploaded and deleted.
+Using Insomnia or Postman, run "node server" and follow the API routes to update the app. 'Users' can be added, deleted, updated, and found by all users. 'Users' can have 'Thoughts', which can be added, updated, and deleted. 'Thoughts' can also be commented on with 'Reactions'. 'Reactions can be uploaded and deleted.
 
 ## Contributions
 
