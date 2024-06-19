@@ -2,7 +2,7 @@
 
 ## Description
 
-A node application that uses mongoose to run the APIs for the backend of a social media app
+A node application that uses mongoose to run the APIs for the backend of a social media app.
 
 ## License
 
